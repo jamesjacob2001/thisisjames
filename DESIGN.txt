@@ -1,0 +1,260 @@
+================================================================================
+  DESIGN DOCUMENT
+  Project: thisisjames
+  Author:  James
+  Course:  Web Design
+================================================================================
+
+
+--------------------------------------------------------------------------------
+1. PROJECT DESCRIPTION
+--------------------------------------------------------------------------------
+
+thisisjames is a personal homepage built with vanilla HTML5, CSS3, and ES6+
+JavaScript. It serves as a simple, minimal introduction to James — his
+background, interests, and the city he calls home.
+
+The site consists of three static pages:
+
+  1. Homepage (index.html)
+     The main landing page. Introduces James with a short bio, a photo, and
+     quick links to the two secondary pages. Features a typewriter animation
+     as the site's original creative component.
+
+  2. Interests (pages/interests.html)
+     A page dedicated to James's personal interests: Boston sports, Formula 1
+     motorsport, and music/DJing. Each interest has its own section with a
+     short write-up.
+
+  3. Boston (pages/boston.html)
+     An AI-generated page covering a brief history of Boston, Massachusetts —
+     the city that shapes many of James's interests. Content is organized
+     chronologically by era.
+
+All three pages share a unified navigation bar and footer. The visual style is
+minimal and content-focused: clean typography, a neutral off-white palette,
+and restrained use of borders and spacing to create structure without clutter.
+
+Technology constraints:
+  - Vanilla HTML5, CSS3, ES6+ only
+  - No JavaScript frameworks or libraries
+  - No jQuery
+  - All JS written as ES6 modules (type="module")
+  - Layout via Flexbox
+
+
+--------------------------------------------------------------------------------
+2. USER PERSONAS
+--------------------------------------------------------------------------------
+
+PERSONA A — The Recruiter
+  Name:        Sarah
+  Age:         32
+  Role:        Technical Recruiter at a mid-size tech company
+  Goal:        Quickly understand who James is, what his background looks like,
+               and whether he might be a good fit for an open role.
+  Frustration: Personal sites that are hard to scan, slow to load, or lack
+               any real information about the person.
+  What she does on the site:
+               Lands on the homepage, reads the bio snapshot, checks the
+               GitHub and LinkedIn links, and may skim the Interests page
+               to get a sense of James's personality.
+
+PERSONA B — Friend or Family Member
+  Name:        Marcus
+  Age:         21
+  Role:        College friend of James
+  Goal:        See what James has been working on, get a feel for the site
+               he built, and maybe learn something about his interests.
+  Frustration: Sites that feel too formal or corporate — he wants something
+               that actually feels like James.
+  What he does on the site:
+               Browses all three pages casually. Reads the interests section
+               and probably appreciates the Boston sports content. Checks
+               out the Boston history page out of curiosity.
+
+
+--------------------------------------------------------------------------------
+3. USER STORIES
+--------------------------------------------------------------------------------
+
+Story 1 — Learning about James
+  As a recruiter visiting the site for the first time,
+  I want to quickly read a short bio and see links to James's GitHub and
+  LinkedIn,
+  so that I can decide whether to reach out to him for an opportunity.
+
+Story 2 — Exploring interests
+  As a friend or family member,
+  I want to browse James's interests in sports, F1, and music,
+  so that I can see what he's passionate about and feel like I know him better.
+
+Story 3 — Navigating between pages
+  As any visitor,
+  I want a clear, persistent navigation bar on every page,
+  so that I can move freely between the homepage, interests, and Boston pages
+  without using the browser back button.
+
+Story 4 — Discovering the Boston page
+  As a curious visitor,
+  I want to find and read the AI-generated Boston history page,
+  so that I can learn something new while exploring the site.
+
+Story 5 — Getting a first impression
+  As a first-time visitor,
+  I want the homepage to load quickly and feel visually clean,
+  so that I immediately get a positive impression of James's taste and
+  attention to detail.
+
+
+--------------------------------------------------------------------------------
+4. DESIGN MOCKUPS
+--------------------------------------------------------------------------------
+
+Mockups are represented below as ASCII wireframes showing the layout and
+content hierarchy of each page. All three pages share the same nav and footer.
+
+________________________________________________________________________________
+
+PAGE 1 — HOMEPAGE (index.html)
+________________________________________________________________________________
+
++----------------------------------------------------------------------+
+|  NAV:  thisisjames          Home  |  Interests  |  Boston            |
++----------------------------------------------------------------------+
+|                                                                      |
+|   [ PHOTO PLACEHOLDER — circular, 120x120px ]                       |
+|                                                                      |
+|   Personal Homepage                    <- eyebrow label (small caps) |
+|                                                                      |
+|   Hi, I'm James.                       <- h1, large serif            |
+|                                                                      |
+|   [Your one-line intro tagline here]   <- muted body text            |
+|                                                                      |
+|   +----------------------------------------------------------+       |
+|   |  Boston sports fan.  |  <- typewriter animation + cursor |       |
+|   +----------------------------------------------------------+       |
+|                                                                      |
++----------------------------------------------------------------------+
+|   ABOUT                              <- section label                |
+|   ------------------------------------------------------------------ |
+|   A bit about me                     <- h2                           |
+|   [Short bio paragraph placeholder]                                  |
+|                                                                      |
+|   Location          |   Currently                                    |
+|   [City]            |   [e.g. Studying CS]                           |
+|                     |                                                |
+|   GitHub            |   LinkedIn                                     |
+|   [link]            |   [link]                                       |
++----------------------------------------------------------------------+
+|   EXPLORE                            <- section label                |
+|   ------------------------------------------------------------------ |
+|   What you'll find here              <- h2                           |
+|                                                                      |
+|   +----------------------------------------------+  ->  arrow       |
+|   |  Interests                                   |                   |
+|   |  Boston sports, F1, music & DJing            |                   |
+|   +----------------------------------------------+                   |
+|                                                                      |
+|   +----------------------------------------------+  ->  arrow       |
+|   |  Boston                                      |                   |
+|   |  A brief history of the city I love          |                   |
+|   +----------------------------------------------+                   |
+|                                                                      |
++----------------------------------------------------------------------+
+|  FOOTER:  © 2025 James          GitHub  |  LinkedIn                  |
++----------------------------------------------------------------------+
+
+
+________________________________________________________________________________
+
+PAGE 2 — INTERESTS (pages/interests.html)
+________________________________________________________________________________
+
++----------------------------------------------------------------------+
+|  NAV:  thisisjames          Home  |  Interests  |  Boston            |
++----------------------------------------------------------------------+
+|                                                                      |
+|   About Me                         <- eyebrow label                  |
+|                                                                      |
+|   My Interests                     <- h1, large serif                |
+|                                                                      |
+|   [Short intro tagline]            <- muted body text                |
+|                                                                      |
++----------------------------------------------------------------------+
+|   01 — Sports                      <- section label                  |
+|   ------------------------------------------------------------------ |
+|   Boston Sports                    <- h2                             |
+|   [Write-up placeholder]                                             |
+|                                                                      |
++----------------------------------------------------------------------+
+|   02 — Motorsport                  <- section label                  |
+|   ------------------------------------------------------------------ |
+|   Formula 1                        <- h2                             |
+|   [Write-up placeholder]                                             |
+|                                                                      |
++----------------------------------------------------------------------+
+|   03 — Music                       <- section label                  |
+|   ------------------------------------------------------------------ |
+|   Music & DJing                    <- h2                             |
+|   [Write-up placeholder]                                             |
+|                                                                      |
++----------------------------------------------------------------------+
+|  FOOTER:  © 2025 James          GitHub  |  LinkedIn                  |
++----------------------------------------------------------------------+
+
+
+________________________________________________________________________________
+
+PAGE 3 — BOSTON / AI PAGE (pages/boston.html)
+________________________________________________________________________________
+
++----------------------------------------------------------------------+
+|  NAV:  thisisjames          Home  |  Interests  |  Boston            |
++----------------------------------------------------------------------+
+|                                                                      |
+|   [ AI GENERATED ]  <- small pill/badge label                        |
+|   City Profile      <- eyebrow label                                 |
+|                                                                      |
+|   Boston, Massachusetts  <- h1, large serif                          |
+|                                                                      |
+|   [Intro tagline about the city]   <- muted body text                |
+|                                                                      |
++----------------------------------------------------------------------+
+|   1630                             <- era label                      |
+|   ------------------------------------------------------------------ |
+|   Founding & Colonial Era          <- h2                             |
+|   [AI-generated paragraph]                                           |
+|                                                                      |
++----------------------------------------------------------------------+
+|   1770s                                                              |
+|   ------------------------------------------------------------------ |
+|   Cradle of the Revolution         <- h2                             |
+|   [AI-generated paragraph]                                           |
+|                                                                      |
++----------------------------------------------------------------------+
+|   1636 – Present                                                     |
+|   ------------------------------------------------------------------ |
+|   A City of Learning               <- h2                             |
+|   [AI-generated paragraph]                                           |
+|                                                                      |
++----------------------------------------------------------------------+
+|   1903 – Present                                                     |
+|   ------------------------------------------------------------------ |
+|   A Sports City Through and Through  <- h2                           |
+|   [AI-generated paragraph]                                           |
+|                                                                      |
++----------------------------------------------------------------------+
+|   Today                                                              |
+|   ------------------------------------------------------------------ |
+|   Modern Boston                    <- h2                             |
+|   [AI-generated paragraph]                                           |
+|                                                                      |
++----------------------------------------------------------------------+
+|  FOOTER:  © 2025 James          GitHub  |  LinkedIn                  |
++----------------------------------------------------------------------+
+
+
+--------------------------------------------------------------------------------
+  END OF DOCUMENT
+--------------------------------------------------------------------------------
