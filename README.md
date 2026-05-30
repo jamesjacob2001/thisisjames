@@ -24,7 +24,9 @@ A personal homepage built with vanilla HTML5, CSS3, and ES6+ JavaScript modules.
 
 ## Screenshot
 
-> _(Add a screenshot of the homepage here after deployment)_
+![alt text](image.png)
+
+![alt text](image-1.png)
 
 ---
 
